@@ -1,0 +1,116 @@
+:root {
+    font-size: 62.5%;
+    --primary-color: #72676F;
+    --secondary-color:#D5e5E5;
+    --font-color: #fff;
+    --shadow-color: #5D6B6B;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: var(--primary-color);
+    font-size: 1.6rem;
+}
+
+p, i, h1 {
+    color: var(--font-color);
+}
+i, h1 {
+    font-size: 3.2rem;
+}
+
+section {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: min(42.5rem, 100%);
+    margin-inline: auto;
+    padding-inline: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.option {
+    width: 35rem;
+    margin-bottom: 4rem;
+    padding: 1rem;
+    border-radius: 10rem;
+    box-shadow: 0px 0px 15px 10px var(--secondary-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.option p {
+    opacity: 0.8;
+    transition: 1s ease-in;
+}
+.option p.active {
+    opacity: 1;
+    color: var(--secondary-color);
+}
+
+.timer {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px 10px var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle {
+    width: 27rem;
+    height: 27rem;
+    border-radius: 50%;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    background-color: rgb(115, 115, 117);
+}
+
+.time {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.time p{
+    font-size: 5.6rem;
+}
+
+.time p:nth-of-type(2){
+    position: relative;
+    top: -0.5rem;
+    margin-inline: 1rem;
+}
+.controls {
+    margin-top: 3rem;
+}
+.controls button {
+    font-size: larger;
+    color: #fff;
+    border: #5D6B6B;
+    background-color: transparent;
+    cursor: pointer;
+}
